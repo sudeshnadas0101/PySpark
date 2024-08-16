@@ -12,6 +12,7 @@ from pyspark.sql.functions import col, desc
 spark = SparkSession.builder.appName("sparkSQL").getOrCreate()
 print(spark.version)
 
+#this is a DataFrameReader
 data = spark.read.format('csv')\
             .option("inferschema","true")\
             .option("header","true")\
